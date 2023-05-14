@@ -17,18 +17,21 @@ def home():
     return render_template('home.html')
 
 # Reservation page
-@app.route('/reservation')
+# Reservation page
+@app.route('/reservation', methods=['GET', 'POST'])
 def reservation():
-    return render_template('reservation.html')
+    if request.method == 'POST':
+        # Get the form data
+        name = request.form['name']
+        email = request.form['email']
+        date = request.form['date']
+        time = request.form['time']
+        party_size = request.form['party-size']
 
-# Confirmation page
-@app.route('/confirmation', methods=['POST'])
-def confirmation():
-    name = request.form['name']
-    date = request.form['date']
-    time = request.form['time']
-    party_size = request.form['party_size']
-    return render_template('confirmation.html', name=name, date=date, time=time, party_size=party_size)
+# Render the confirmation page with the name and date of the reservation
+        return render_template('confirmation.html', name=name, date=date, time=time, party_size=party_size)
+
+    return render_template('reservation.html')
 
 # Menu page
 @app.route('/menu')
