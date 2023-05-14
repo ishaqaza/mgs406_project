@@ -24,7 +24,7 @@ def reservation():
 # Confirmation page
 @app.route('/confirmation')
 def confirmation():
-    return render_template('confirmation.html')
+    return render_template('confirmation.html', name=name, date=date, time=time, party_size=party_size)
 
 # Menu page
 @app.route('/menu')
