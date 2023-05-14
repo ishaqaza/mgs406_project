@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Restaurant Home Page</title>
+  <title>Restaurant Home Page</title>
+  <style>
+    .header {
+      text-align: center;
+      background-color: yellow;
+      padding: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: lightgoldenrodyellow;
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-	<p>Please select an option:</p>
-	<ul>
-		<li><a href="{{ url_for('reservation') }}">Book a Reservation</a></li>
-		<li><a href="{{ url_for('menu') }}">Our Menu</a></li>
-	</ul>
+  <div class="header">
+    <h1>Welcome To Our Restaurant!</h1>
+  </div>
+  <center><u><p>Please select an option:</p></u></center>
+  <center><a href="{{ url_for('reservation') }}" class="button">Book a Reservation</a></center>
+  <center><a href="{{ url_for('menu') }}" class="button">Our Menu</a></center>
 </body>
 </html>
-
