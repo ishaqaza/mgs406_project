@@ -2,13 +2,17 @@
 <html>
 <head>
     <title>Reservation Confirmation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Reservation Confirmation</h1>
         <p>Thank you for your reservation, {{ name }}! You have booked a table for {{ party_size }} people on {{ date }} at {{ time }}.</p>
-        <a href="{{ url_for('home') }}">Go Back to Home Page</a>
+        <a href="{{ url_for('home') }}" class="btn btn-warning">Go Back to Home Page</a>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
 
