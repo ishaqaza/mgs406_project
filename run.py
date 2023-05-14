@@ -21,10 +21,10 @@ def home():
 @app.route('/menu')
 def menu():
     cursor = db.cursor()
-    cursor.execute('SELECT * FROM menu_items')
+    cursor.execute('SELECT * FROM menu')
     menu_items = cursor.fetchall()
     cursor.close()
-    return render_template('menu.html', menu_items=menu_items)
+    return render_template('menu.html', menu=menu_items)
 
 # Reservation page
 @app.route('/reservation', methods=['GET', 'POST'])
@@ -48,7 +48,7 @@ def reservation():
 
         # Insert the reservation data into the database
         cursor.execute('''
-            INSERT INTO reservations (name, email, date, time, party_size)
+            INSERT INTO reservations (name, email, date, time, party-size)
             VALUES (%s, %s, %s, %s, %s)
         ''', (name, email, date, time, party_size))
         db.commit()
@@ -58,7 +58,7 @@ def reservation():
         db.close()
 
         # Render the confirmation page with the name and date of the reservation
-        return render_template('confirmation.html', name=name, date=date)
+        return render_template('confirmation.html', name=name, date=date, email=email, party_size=party_size)
 
     return render_template('reservation.html')
 
