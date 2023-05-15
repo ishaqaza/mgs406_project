@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reservations - Manager View</title>
+  </head>
+  <body>
+    <h1>Reservations - Manager View</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Party Size</th>
+      </tr>
+      {% for reservation in reservations %}
+      <tr>
+        <td>{{ reservation[1] }}</td>
+        <td>{{ reservation[2] }}</td>
+        <td>{{ reservation[3] }}</td>
+        <td>{{ reservation[4] }}</td>
+        <td>{{ reservation[5] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
