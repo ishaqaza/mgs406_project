@@ -9,7 +9,7 @@ The home page has a header and three buttons to create a reservation, view the m
     All scripts are credited in the code.
   Once you submit the form you are redirected to a confirmation page which displays the values you entered, there is also an option to return to the home page. 
     
-  The managers page is a list of the reservations, the table is based in sql and updates whenever soemone fills out the form, there is also a home button there as well. 
+  The managers page is a list of the reservations, the table is based in sql and updates whenever someone fills out the form, there is also a home button there as well. 
   
   
   There are two sql dump files, menu.sql is for the menu table, reservations.sql is for the reservation table.
