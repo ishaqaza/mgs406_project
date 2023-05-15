@@ -12,6 +12,9 @@ The home page has a header and three buttons to create a reservation, view the m
   The managers page is a list of the reservations, the table is based in sql and updates whenever soemone fills out the form, there is also a home button there as well. 
   
   
+  There are two sql dump files, menu.sql is for the menu table, reservations.sql is for the reservation table.
+  
+  
 
 
 app.py runs on gunicorn, manage.py and managers.py only run on the 5000 localhost server
