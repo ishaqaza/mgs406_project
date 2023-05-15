@@ -1,7 +1,7 @@
 # mgs406_project
 
 This creates a website for a restaraunt.
-The home page has a header and three buttons to create a reservation, view the menu, and a managers page. There are three pages because I misread the requirements and felt it would be easier to add on to the code rather than delete things. 
+The home page has a header and three buttons to create a reservation, view the menu, and a managers page. There are three pages because I misread the requirements and felt it would be easier to add on to the code rather than start over. 
 
   The menu is a table pulled from sql, there is also a button which brings you back to the home page.
   
