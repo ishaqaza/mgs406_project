@@ -9,7 +9,7 @@
         <h1>Reservation Form</h1>
         {% if message %}
             <p>{{ message }}</p>
-            <a href="{{ url_for('index') }}">Go Back to Home Page</a>
+            <a href="/" class="btn btn-warning">Home</a>
         {% else %}
             <form method="POST" action="{{ url_for('reservation') }}">
                 <label for="name">Name:</label>
