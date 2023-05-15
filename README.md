@@ -8,3 +8,5 @@ The home page has a header and two buttons for a menu and to create a reservatio
   All scripts are credited in the code.
   
 Once you submit the form you are redirected to a confirmation page which displays the values you entered, there is also an option to return to the home page. 
+
+app.py runs on gunicorn, manage.py only runs on the 5000 localhost server
